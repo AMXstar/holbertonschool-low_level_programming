@@ -1,27 +1,30 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * fizz_buzz - prints numbers from 1 to 100
+ * main - prints FizzBuzz from 1 to 100
+ *
+ * Return: Always 0
  */
-void fizz_buzz(void)
+int main(void)
 {
-    int i;
+	int i;
 
-    for (i = 1; i <= 100; i++)
-    {
-        if (i % 15 == 0)
-            printf("FizzBuzz");
-        else if (i % 3 == 0)
-            printf("Fizz");
-        else if (i % 5 == 0)
-            printf("Buzz");
-        else
-            printf("%d", i);
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 15 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
 
-        if (i < 100)
-            printf(" ");
-        else
-            printf("\n");
-    }
+		if (i < 100)
+			printf(" ");
+		else
+			printf("\n");
+	}
+
+	return (0);
 }
