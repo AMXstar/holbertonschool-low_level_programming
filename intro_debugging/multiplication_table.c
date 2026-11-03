@@ -8,9 +8,9 @@ void print_table(int size)
 	{
 		for (col = 1; col <= size; col++)
 		{
-			printf("%d", row * col);
-			if (col < size)
+			if (col > 1)
 				printf(" ");
+			printf("%d", row * col);
 		}
 		printf("\n");
 	}
