@@ -3,6 +3,9 @@
 int main(void)
 {
     int choice;
+    int a;
+    int b;
+    int result;
 
     printf("Welcome to Simple Calculator!\n");
 
@@ -28,7 +31,29 @@ int main(void)
         }
         else if (choice < 0 || choice > 4)
         {
-            printf("Invalid choice!\n");
+            printf("Invalid choice\n");
+        }
+        else if (choice == 1)
+        {
+            printf("A: ");
+            fflush(stdout);
+
+            if (scanf("%d", &a) != 1)
+            {
+                return 1;
+            }
+
+            printf("B: ");
+            fflush(stdout);
+
+            if (scanf("%d", &b) != 1)
+            {
+                return 1;
+            }
+
+            result = a + b;
+
+            printf("Result: %d\n", result);
         }
 
     } while (choice != 0);
