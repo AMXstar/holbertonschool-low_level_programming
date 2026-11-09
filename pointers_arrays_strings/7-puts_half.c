@@ -2,23 +2,25 @@
 #include <unistd.h>
 
 /**
- * puts7 - Prints every other character of a string
+ * puts_half - Prints the second half of a string
  * @str: Pointer to the string
  */
-void puts7(char *str)
+void puts_half(char *str)
 {
-	int i = 0;
 	int len = 0;
+	int i;
 
 	while (str[len] != '\0')
 	{
 		len++;
 	}
 
+	i = (len + 1) / 2;
+
 	while (i < len)
 	{
 		write(1, &str[i], 1);
-		i += 2;
+		i++;
 	}
 
 	write(1, "\n", 1);
