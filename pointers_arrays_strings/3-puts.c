@@ -1,5 +1,5 @@
 
-#include "main.h"
+#include <unistd.h>
 
 /**
  * _puts - Prints a string followed by a new line
@@ -11,8 +11,9 @@ void _puts(char *str)
 
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
 		i++;
 	}
-	_putchar('\n');
+
+	write(1, str, i);
+	write(1, "\n", 1);
 }
