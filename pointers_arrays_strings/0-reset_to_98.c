@@ -1,4 +1,3 @@
-
 /**
  * reset_to_98 - Updates the value pointed to by n to 98
  * @n: Pointer to the integer
