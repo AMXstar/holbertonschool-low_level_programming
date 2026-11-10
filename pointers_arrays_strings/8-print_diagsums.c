@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_unsigned - Prints an unsigned integer
+ * print_uint int - Prints an unsigned int integer
  * @n: Number to print
  */
-static void print_unsigned(unsigned int n)
+static void print_uint(unsigned int n)
 {
 	if (n > 9)
-		print_unsigned(n / 10);
+		print_uint(n / 10);
 
 	_putchar('0' + (n % 10));
 }
@@ -30,7 +30,7 @@ static void print_number(int n)
 		value = (unsigned int)n;
 	}
 
-	print_unsigned(value);
+	print_uint(value);
 }
 
 /**
